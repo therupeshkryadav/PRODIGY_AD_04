@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_player1_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1: 0"
+        android:textColor="@color/player1Color"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_player2_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2: 0"
+        android:textColor="#9C27B0"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"/>
+
+    <GridLayout
+        android:id="@+id/board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginTop="50dp">
+
+        <!-- Top row -->
+        <ImageView
+            android:id="@+id/button_0_0"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Top left button"
+            android:src="@drawable/cross"
+            android:background="@drawable/button_border"/>
+        <ImageView
+            android:id="@+id/button_0_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Top middle button"
+            android:src="@drawable/circle"
+            android:background="@drawable/button_border"/>
+        <ImageView
+            android:id="@+id/button_0_2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Top right button"
+            android:src="@drawable/cross"
+            android:background="@drawable/button_border"/>
+
+        <!-- Middle row -->
+        <ImageView
+            android:id="@+id/button_1_0"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Middle left button"
+            android:src="@drawable/cross"
+            android:background="@drawable/button_border"/>
+        <ImageView
+            android:id="@+id/button_1_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Center button"
+            android:src="@drawable/circle"
+            android:background="@drawable/button_border"/>
+        <ImageView
+            android:id="@+id/button_1_2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Middle right button"
+            android:src="@drawable/cross"
+            android:background="@drawable/button_border"/>
+
+        <!-- Bottom row -->
+        <ImageView
+            android:id="@+id/button_2_0"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Bottom left button"
+            android:src="@drawable/circle"
+            android:background="@drawable/button_border"/>
+        <ImageView
+            android:id="@+id/button_2_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Bottom middle button"
+            android:src="@drawable/cross"
+            android:background="@drawable/button_border"/>
+        <ImageView
+            android:id="@+id/button_2_2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Bottom right button"
+            android:src="@drawable/circle"
+            android:background="@drawable/button_border"/>
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/winning_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Game"
+        android:layout_below="@id/board"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/resetButtonBackground"
+        android:textColor="#212121"
+        android:contentDescription="Reset the game"/>
+
+    <TextView
+        android:id="@+id/win_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_below="@id/reset_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

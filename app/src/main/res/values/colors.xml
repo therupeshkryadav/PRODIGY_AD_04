@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="player1Color">#ff4081</color>
+    <color name="player2Color">#3f51b5</color>
+    <color name="buttonBackground">#e0e0e0</color>
+    <color name="boardBackground">#ffffff</color>
+    <color name="resetButtonBackground">#8bc34a</color>
+</resources>
